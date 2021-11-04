@@ -37,7 +37,7 @@ For full configurations, you can look inside the folder `cfg`.
 For `training` :
 ```ini
 batch=64
-max_batches = 6000
+max_batches=6000
 learning_rate=0.001
 
 width=416
@@ -47,7 +47,7 @@ height=416
 For `evaluation` :
 ```ini
 batch=1
-max_batches = 6000
+max_batches=6000
 learning_rate=0.001
 
 width=416
@@ -69,7 +69,7 @@ height=416
 For `evaluation` :
 ```ini
 batch=1
-max_batches = 6000
+max_batches=6000
 learning_rate=0.001
 
 width=416
@@ -90,3 +90,16 @@ The model achieved a maximum `mAP` of **76.13%**.
 
 ![yolov4_evaluation](yolov4_mAP.png)
 
+## Results
+
+**Yolo v3**
+
+Video result :
+
+![v3_video](data/video_result_yolo_v3.gif)
+
+**Yolo v4**
+
+Video result : 
+
+![v4_video](data/video_result_yolo_v4.gif)
