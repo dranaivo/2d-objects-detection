@@ -78,3 +78,15 @@ height=416
 
 ## Metrics
 
+**Yolo v3**
+
+The model achieved a maximum `mAP` of **78.86%**.
+
+![yolov3_evaluation](yolov3_mAP.png)
+
+**Yolo v4**
+
+The model achieved a maximum `mAP` of **76.13%**.
+
+![yolov4_evaluation](yolov4_mAP.png)
+
