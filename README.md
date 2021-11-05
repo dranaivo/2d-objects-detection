@@ -16,3 +16,4 @@ Each use case is about detection. For example, "Face mask" means "Face mask dete
 | Use case      | Model         | Results  |
 | ------------- | ------------- |:--------:|
 | [Face mask](yolo_face_mask_detection/README.md)     | YOLO v3/v4 | ![yolov3](yolo_face_mask_detection/data/video_result_yolo_v3.gif) |
+| [Registration plate](license_plate_recognition/README.md)     | YOLO v3/v4 | ![faster_rcnn](license_plate_recognition/fasterrcnn_prediction_1.gif) |
