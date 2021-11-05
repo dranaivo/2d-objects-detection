@@ -8,7 +8,7 @@ I am using `torch==1.7.1` and `torchvision==0.8.2` to build the model, do the tr
 
 ## Model
 
-The two-stage detector `Faster R-CNN` is used. Specifically, `torchvision` implementation : it's a pre-trained model on the **COCO** object detection dataset, and the model's head is trained from scratch. 
+The two-stage detector `Faster R-CNN` is used. Specifically, `torchvision` implementation : it's a pre-trained model on the **COCO** object detection dataset, and the model's head is trained from scratch. PYTORCH TUTORIAL
 
 ```python
 import torchvision
@@ -48,6 +48,31 @@ Distribution :
 
 ## Training and Evaluation configuration
 
-
 ## Metrics
+
+The model achieved an `mAP` of **57.28%** (COCO primary metric).
+
+Among the [12 metrics used for characterizing the performance of an object detector on COCO](https://cocodataset.org/#detection-eval), I implemented 6 :
+![coco_eval](coco_eval.png)
+
+I also included the **AP@[IoU=0.50, IoU=0.75]** for **small, medium** and **large** areas :
+
+```bash
+Average Precision  (AP) @[ IoU= 0.50:0.95 | area=all ] = 57.28%
+Average Precision  (AP) @[ IoU=      0.50 | area=all ] = 88.98%
+Average Precision  (AP) @[ IoU=      0.75 | area=all ] = 68.12%
+
+Average Precision  (AP) @[ IoU= 0.50:0.95 | area=small ] = 27.41%
+Average Precision  (AP) @[ IoU=      0.50 | area=small ] = 55.15%
+Average Precision  (AP) @[ IoU=      0.75 | area=small ] = 20.40%
+
+Average Precision  (AP) @[ IoU= 0.50:0.95 | area=medium ] = 61.02%
+Average Precision  (AP) @[ IoU=      0.50 | area=medium ] = 90.31%
+Average Precision  (AP) @[ IoU=      0.75 | area=medium ] = 77.04%
+
+Average Precision  (AP) @[ IoU= 0.50:0.95 | area=large ] = 61.82%
+Average Precision  (AP) @[ IoU=      0.50 | area=large ] = 91.51%
+Average Precision  (AP) @[ IoU=      0.75 | area=large ] = 75.53%
+``` 
+
 ## Image and Video results
