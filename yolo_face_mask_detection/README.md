@@ -8,7 +8,7 @@ It's [darknet](https://github.com/AlexeyAB/darknet).
 
 ## Model
 
-**YOLO v3** and **[**YOLO v4**.**
+The single-stage detector **YOLO v3** and **YOLO v4** are used.
 
 ## Dataset
 
