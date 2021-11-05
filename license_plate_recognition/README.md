@@ -27,6 +27,27 @@ def faster_rcnn_pretrained_model(num_classes):
 ```
 
 ## Dataset
+
+The dataset is extracted from [**Open Images Dataset**](https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&type=detection&c=%2Fm%2F01jfm_), filtering the category `"Vehicle registration plate"`. It was processed to have the following structure :
+
+```bash
+Dataset
+├── train
+│   └── Vehicle registration plate
+│       └── Label
+└── validation
+    └── Vehicle registration plate
+        └── Label
+```
+
+`Vehicle registration plate/` contains the images, and `Label` the annotations. 
+
+Distribution :
+- The `train` split contains **5308** images, 
+- The `validation` split contains **386** images.
+
 ## Training and Evaluation configuration
+
+
 ## Metrics
 ## Image and Video results
