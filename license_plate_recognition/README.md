@@ -8,8 +8,9 @@ I am using `torch==1.7.1` and `torchvision==0.8.2` to build the model, do the tr
 
 ## Model
 
-The two-stage detector `Faster R-CNN` is used. Specifically, `torchvision` implementation : it's a pre-trained model on the **COCO** object detection dataset, and the model's head is trained from scratch. PYTORCH TUTORIAL
+The two-stage detector `Faster R-CNN` is used. Specifically, `torchvision` implementation : it's a pre-trained model on the **COCO** object detection dataset, and the model's head is trained from scratch. 
 
+Taking inspiration from [pytorch tutorial](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html#finetuning-from-a-pretrained-model) :
 ```python
 import torchvision
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
@@ -46,13 +47,26 @@ Distribution :
 - The `train` split contains **5308** images, 
 - The `validation` split contains **386** images.
 
-## Training and Evaluation configuration
+## Training configuration
+
+The model was trained for **50 epochs** on the `train` split :
+```python
+# data configurations
+num_workers = 1
+batch_size = 2
+
+# training configurations (SGD with momentum)
+lr = 1e-3
+momentum = 0.9
+weight_decay = 0.0005
+n_epoch = 50
+```
 
 ## Metrics
 
-The model achieved an `mAP` of **57.28%** (COCO primary metric).
+The model achieved an `mAP` of **57.28%** (COCO primary metric) on the `validation` split.
 
-Among the [12 metrics used for characterizing the performance of an object detector on COCO](https://cocodataset.org/#detection-eval), I implemented 6 :
+Among the [12 metrics used for characterizing the performance of an object detector on COCO](https://cocodataset.org/#detection-eval), I implemented 6 (AP):
 ![coco_eval](coco_eval.png)
 
 I also included the **AP@[IoU=0.50, IoU=0.75]** for **small, medium** and **large** areas :
